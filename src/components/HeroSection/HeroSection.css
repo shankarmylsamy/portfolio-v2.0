@@ -81,7 +81,7 @@
 .button--primary {
   border-color: var(--ink);
   background: var(--ink);
-  color: #fff;
+  color: var(--button-text);
 }
 
 .button--primary:hover {
@@ -99,11 +99,11 @@
   top: 14%;
   width: 230px;
   height: 230px;
-  border: 1px solid #e9e5df;
+  border: 1px solid var(--decoration-border);
   border-radius: 50%;
   display: grid;
   place-items: center;
-  color: #f0ede7;
+  color: var(--decoration-ink);
   font-size: 7rem;
   font-weight: 700;
   letter-spacing: -0.12em;

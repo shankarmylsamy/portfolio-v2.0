@@ -1,6 +1,11 @@
 import './SiteHeader.css'
 
-function SiteHeader() {
+type SiteHeaderProps = {
+  isDarkTheme: boolean
+  onToggleTheme: () => void
+}
+
+function SiteHeader({ isDarkTheme, onToggleTheme }: SiteHeaderProps) {
   return (
     <header className="site-header">
       <a className="wordmark" href="#home" aria-label="Shankar M home">
@@ -13,6 +18,16 @@ function SiteHeader() {
         <a className="nav-contact" href="#contact">
           Get in touch <span aria-hidden="true">↗</span>
         </a>
+        <button
+          className="theme-toggle"
+          type="button"
+          onClick={onToggleTheme}
+          aria-label={`Switch to ${isDarkTheme ? 'light' : 'dark'} theme`}
+          aria-pressed={isDarkTheme}
+          title={`Switch to ${isDarkTheme ? 'light' : 'dark'} theme`}
+        >
+          <span aria-hidden="true">{isDarkTheme ? '☀' : '☾'}</span>
+        </button>
       </nav>
     </header>
   )

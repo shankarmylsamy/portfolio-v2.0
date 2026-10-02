@@ -45,6 +45,26 @@
   color: var(--ink);
 }
 
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.1rem;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.theme-toggle:hover {
+  background: var(--surface);
+}
+
 @media (max-width: 760px) {
   .site-header {
     min-height: 72px;
@@ -57,14 +77,26 @@
   .main-nav a {
     font-size: 0.72rem;
   }
+
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 auto;
+  }
 }
 
 @media (max-width: 480px) {
   .main-nav {
-    gap: 11px;
+    gap: 8px;
   }
 
   .main-nav a {
     font-size: 0.66rem;
+  }
+
+  .theme-toggle {
+    width: 28px;
+    height: 28px;
+    font-size: 0.95rem;
   }
 }

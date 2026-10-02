@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import BackgroundSection from './components/BackgroundSection/BackgroundSection'
 import ContactSection from './components/ContactSection/ContactSection'
 import ExperienceSection from './components/ExperienceSection/ExperienceSection'
@@ -8,9 +9,14 @@ import SiteFooter from './components/SiteFooter/SiteFooter'
 import SiteHeader from './components/SiteHeader/SiteHeader'
 
 function App() {
+  const [isDarkTheme, setIsDarkTheme] = useState(false)
+
   return (
-    <>
-      <SiteHeader />
+    <div className={`portfolio-app${isDarkTheme ? ' portfolio-app--dark' : ''}`}>
+      <SiteHeader
+        isDarkTheme={isDarkTheme}
+        onToggleTheme={() => setIsDarkTheme((currentTheme) => !currentTheme)}
+      />
       <main>
         <HeroSection />
         <ExperienceSection />
@@ -20,7 +26,7 @@ function App() {
         <ContactSection />
       </main>
       <SiteFooter />
-    </>
+    </div>
   )
 }
 

@@ -6,11 +6,36 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.portfolio-app {
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--ink);
+  transition: background-color 180ms ease, color 180ms ease;
 
   --ink: #262421;
   --muted: #77736e;
   --accent: #c66c4e;
   --line: #e9e5df;
+  --page-bg: #fbfaf8;
+  --surface: #f4f1ec;
+  --decoration-border: #e9e5df;
+  --decoration-ink: #f0ede7;
+  --button-text: #fff;
+}
+
+.portfolio-app--dark {
+  color-scheme: dark;
+  --ink: #f2eee8;
+  --muted: #aaa49a;
+  --accent: #e39170;
+  --line: #393631;
+  --page-bg: #1b1a18;
+  --surface: #252320;
+  --decoration-border: #393631;
+  --decoration-ink: #302e2a;
+  --button-text: #1b1a18;
 }
 
 * {
