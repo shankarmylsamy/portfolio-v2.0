@@ -1,0 +1,28 @@
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 38px;
+}
+
+.section-heading h2 {
+  margin: 12px 0 0;
+  color: var(--ink);
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  font-weight: 550;
+  letter-spacing: -0.07em;
+  line-height: 1.08;
+}
+
+.section-count {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 480px) {
+  .section-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

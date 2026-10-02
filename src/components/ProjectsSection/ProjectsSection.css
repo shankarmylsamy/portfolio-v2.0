@@ -1,0 +1,42 @@
+.projects-section {
+  padding-block: 78px 88px;
+  border-top: 1px solid var(--line);
+}
+
+.projects-placeholder {
+  min-height: 215px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: #f4f1ec;
+}
+
+.placeholder-mark {
+  color: var(--accent);
+  font-size: 3.5rem;
+}
+
+.projects-placeholder h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.1rem;
+  font-weight: 650;
+}
+
+.projects-placeholder p {
+  max-width: 480px;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 480px) {
+  .projects-placeholder {
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 22px;
+  }
+}

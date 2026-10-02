@@ -1,0 +1,70 @@
+.site-header {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wordmark {
+  color: var(--ink);
+  font-size: 1.3rem;
+  font-weight: 750;
+  letter-spacing: -0.08em;
+  text-decoration: none;
+}
+
+.wordmark span,
+.nav-contact span {
+  color: var(--accent);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.main-nav a,
+.site-footer a,
+.profile-links a,
+.contact-socials a {
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.main-nav a:hover,
+.site-footer a:hover,
+.profile-links a:hover,
+.contact-socials a:hover {
+  color: var(--ink);
+}
+
+.main-nav .nav-contact {
+  color: var(--ink);
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    min-height: 72px;
+  }
+
+  .main-nav {
+    gap: 16px;
+  }
+
+  .main-nav a {
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-nav {
+    gap: 11px;
+  }
+
+  .main-nav a {
+    font-size: 0.66rem;
+  }
+}
