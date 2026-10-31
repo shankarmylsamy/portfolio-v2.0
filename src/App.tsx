@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import BackgroundSection from './components/BackgroundSection/BackgroundSection'
 import ContactSection from './components/ContactSection/ContactSection'
 import ExperienceSection from './components/ExperienceSection/ExperienceSection'
@@ -26,6 +27,7 @@ function App() {
         <ContactSection />
       </main>
       <SiteFooter />
+      <Analytics />
     </div>
   )
 }
